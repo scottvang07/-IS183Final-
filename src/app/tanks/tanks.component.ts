@@ -34,7 +34,7 @@ export class TanksComponent implements OnInit {
     this.router.navigate(['tank-create']);
   }
 
-  deleteUser(id:string) {
+  deleteTank(id:string) {
     console.log(`deleting tank with id of : ${id}`);
     this.tankService.deleteTank(id).then((resp) => {
       if(resp) {
