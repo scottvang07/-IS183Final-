@@ -6,6 +6,6 @@
   <label class="label">Serial Number</label>
   <input [(ngModel)]="tank.serial_number" class="form-input" type="text">
   <label class="label">Gallons</label>
-  <input [(ngModel)]="tank.gallons" class="form-input" type="text">
+  <input [(ngModel)]="tank.gallons" class="form-input" type="number">
   <button (click)="updateTank(tank.id, tank)" class="btn pull-right">Update Tank</button>
 </div>
