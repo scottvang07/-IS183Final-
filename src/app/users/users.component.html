@@ -1,0 +1,21 @@
+
+<button class="btn" (click)="goToCreate()">Create a User</button>
+
+<!--For loop, this is how the users will populate and display onto the web page-->
+<div class="user-card-container" *ngFor="let user of users; let i = index">
+
+<!--Use to connect and draw the user by id within the array-->
+<!--Make sure the correct attribute is called (Refer to user._id)-->
+  <div class="user-card" [routerLink]="['/user',user.id]">
+
+  <!--Interpolation, used to display the attribute-->
+  <img class="book-cover" [src]="user.image_url" alt="user">
+    <P>ID: {{user.id}}</P>
+    <P>Email: {{user.email}}</P>
+    <P>User Role: {{user.role}}</P>
+    <P>Last Name: {{user.lastname}}</P>
+  </div>
+
+  <!--Use to inject the function to delete a user. (Refer back to the service.ts file and the component.ts) -->
+  <button class="delete" (click)="deleteUser(user.id)">X</button>
+</div>
