@@ -26,6 +26,7 @@ import { TankCreateComponent } from './tanks/tank-create/tank-create.component';
 // users
 import { UserService } from './users/users.service';
 import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
 
 // Routes
 const appRoutes: Routes = [
@@ -41,7 +42,9 @@ const appRoutes: Routes = [
   { path: 'tank/:id',   component: TankComponent },
   { path: 'tank-create',   component: TankCreateComponent },
   // users
-  { path: 'users', component: UsersComponent }
+  { path: 'users', component: UsersComponent },
+  { path: 'user/:id',   component: UserComponent },
+
  
 ];
 
@@ -63,6 +66,7 @@ const appRoutes: Routes = [
     
     // users
     UsersComponent,
+    UserComponent,
 
   ],
   imports: [
